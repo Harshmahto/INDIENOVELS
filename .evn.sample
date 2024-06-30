@@ -1,0 +1,2 @@
+PORT = YOUR PORT
+MONGODB_URL = mongodb+srv://harshmahto:<YOUR PASSWORD>@cluster0.hnkkljt.mongodb.net
