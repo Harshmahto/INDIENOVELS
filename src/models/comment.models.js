@@ -6,7 +6,7 @@ const commnetSchema = new mongoose.Schema(
             type: Schema.Types.ObjectId
         },
         user_id: {
-        type: Schema.Types.ObjectId
+            type: Schema.Types.ObjectId
         },
         comment_text: {
             type: String
@@ -17,7 +17,7 @@ const commnetSchema = new mongoose.Schema(
         book_id: {
             type: Schema.Types.ObjectId
         }
-    },{}
+    },{timestamps:true}
 )
 
 export const Comment = mongoose.model("Comment",commnetSchema)

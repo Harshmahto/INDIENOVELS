@@ -3,16 +3,18 @@ import mongoose from 'mongoose';
 const reviewSchema = new mongoose.Schema(
     {
         book_id: {
-        type: Schema.Types.ObjectId
+            type: Schema.Types.ObjectId,
+            ref: "Book"
         },
         user_id: {
-        type: Schema.Types.ObjectId
+            type: Schema.Types.ObjectId,
+            ref: "User"
         },
         rating: {
-        type: Number
+            type: Number
         },
         review_date: {
-        type: String
+            type: String
         }
     },{}
 )

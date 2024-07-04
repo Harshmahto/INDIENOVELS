@@ -3,10 +3,13 @@ import mongoose from 'mongoose';
 const bookSchema = new mongoose.Schema(
     {
         title: {
-            type: String
+            type: String,
+            required:true
+
         },
         author: {
-            type: String
+            type: String,
+            required:true
         },
         discription: {
             type: String
@@ -15,7 +18,8 @@ const bookSchema = new mongoose.Schema(
             type: String
         },
         publication_date: {
-            type: String
+            type: String,
+            required:true
         },
         genre: {
             type: String
@@ -23,7 +27,7 @@ const bookSchema = new mongoose.Schema(
         upload_by: {
             type: Schema.Types.ObjectId
         }
-    },{}
+    },{timestamps:true}
 )
 
 export const Book = mongoose.model("Book",bookSchema)

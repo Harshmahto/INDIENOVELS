@@ -32,7 +32,8 @@ const userSchema = new mongoose.Schema(
             type: String
         },
         history: [{
-            type: Schema.Types.ObjectId
+            type: Schema.Types.ObjectId,
+            ref: "Book"
         }]
     },{timestamps:true}
 )
