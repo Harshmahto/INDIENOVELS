@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import mongooseAggregatePaginate from 'mongoose-aggregate-paginate-v2';
 
 const bookSchema = new mongoose.Schema(
     {
@@ -25,10 +26,13 @@ const bookSchema = new mongoose.Schema(
             type: String
         },
         upload_by: {
-            type: Schema.Types.ObjectId
+            type: Schema.Types.ObjectId,
+            ref: "User"
         }
     },{timestamps:true}
 )
+
+bookSchema.plugin(mongooseAggregatePaginate)
 
 export const Book = mongoose.model("Book",bookSchema)
 
