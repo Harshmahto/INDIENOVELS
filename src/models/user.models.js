@@ -8,11 +8,18 @@ const userSchema = new mongoose.Schema(
     {
         username: {
             type: String,
-            required : true
+            required: true,
+            unique: true,
+            lowercase: true,
+            trim: true, 
+            index: true
         },
         email: {
             type: String,
-            required : true
+            required: true,
+            unique: true,
+            lowercase: true,
+            trim: true, 
 
         },
         fullName: {
@@ -23,17 +30,17 @@ const userSchema = new mongoose.Schema(
             type: String,
             required : [true, 'Password is needed']
         },
-        profile_image: {
+        profileImage: {
             type: String
         },
         bio: {
             type: String
         },
-        join_date: {
+        joinDate: {
             type: String,
             required : true
         },
-        cover_image: {
+        coverImage: {
             type: String
         },
         gender: {
